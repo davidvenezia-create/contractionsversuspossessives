@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squish or Own? Contractions vs. Possessives</title>
+<meta name="description" content="Grade 7 grammar practice: tell contractions and possessives apart.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b3c49">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Squish or Own? Contractions vs. Possessives">
+<meta property="og:description" content="Grade 7 grammar practice: tell contractions and possessives apart.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b3c49'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='700' text-anchor='middle' fill='%23ffffff' font-family='Georgia,serif'%3E%E2%80%99s%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --navy: #0b3c49;
+    --ink: #17252a;
+    --teal: #137c7c;
+    --teal-tint: #ddf1f1;
+    --orange: #c2410c;
+    --orange-tint: #fde6dc;
+    --soft: #f3f7f7;
+    --white: #ffffff;
+    --green: #2e7d32;
+    --green-tint: #e3f3e4;
+    --red: #b3261e;
+    --red-tint: #fbe4e2;
+    --gold: #f6b93b;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--soft);
+    line-height: 1.5;
+  }
+  h1, h2, h3 { font-family: Cambria, Georgia, "Times New Roman", serif; color: var(--navy); line-height: 1.2; margin: 0 0 .5rem; }
+  header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 1.4rem 1rem 1.2rem;
+    text-align: center;
+  }
+  header h1 { color: var(--white); font-size: 2rem; margin-bottom: .25rem; }
+  header p { margin: 0; color: #d6e8ea; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1rem; }
+  nav { background: var(--white); border-bottom: 2px solid #d5e3e4; position: sticky; top: 0; z-index: 5; }
+  nav .wrap { display: flex; gap: .4rem; flex-wrap: wrap; padding: .6rem 1rem; }
+  .tab {
+    font: inherit; font-weight: 700; cursor: pointer;
+    min-height: 48px; padding: .4rem 1rem;
+    border: 2px solid var(--navy); background: var(--white); color: var(--navy);
+    border-radius: 999px;
+  }
+  .tab[aria-selected="true"] { background: var(--navy); color: var(--white); }
+  .tab:focus-visible, .btn:focus-visible, .opt:focus-visible, .chip:focus-visible { outline: 4px solid var(--gold); outline-offset: 2px; }
+  main { padding: 1.2rem 0 3rem; }
+  .panel[hidden] { display: none; }
+  .card { background: var(--white); border-radius: 16px; padding: 1.1rem 1.2rem; margin-bottom: 1rem; border: 1px solid #d5e3e4; }
+  .card.teal { background: var(--teal-tint); border-color: #b4dede; }
+  .card.orange { background: var(--orange-tint); border-color: #f4c3ae; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } html { font-size: 17px; } }
+  .big { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin: .3rem 0; }
+  .tag { display: inline-block; font-weight: 800; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; padding: .15rem .6rem; border-radius: 999px; color: var(--white); }
+  .tag.t { background: var(--teal); } .tag.o { background: var(--orange); }
+  .teal h2, .teal h3 { color: var(--teal); } .orange h2, .orange h3 { color: var(--orange); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: .55rem .7rem; vertical-align: top; }
+  thead th { color: var(--white); }
+  thead th:first-child { background: var(--teal); border-radius: 10px 0 0 0; }
+  thead th:last-child { background: var(--orange); border-radius: 0 10px 0 0; }
+  tbody td:first-child { background: var(--teal-tint); }
+  tbody td:last-child { background: var(--orange-tint); }
+  tbody tr + tr td { border-top: 3px solid var(--white); }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .chip {
+    font: inherit; font-weight: 600; cursor: pointer; min-height: 44px;
+    padding: .35rem .9rem; border-radius: 12px; border: 2px solid var(--navy);
+    background: var(--white); color: var(--ink);
+  }
+  .chip[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+  .steps { display: grid; gap: .5rem; margin: .8rem 0 0; }
+  .step { display: flex; gap: .7rem; align-items: baseline; }
+  .step b.n { flex: none; width: 2rem; height: 2rem; line-height: 2rem; text-align: center; border-radius: 50%; background: var(--navy); color: var(--white); }
+  .verdict { font-weight: 800; padding: .1rem .6rem; border-radius: 8px; color: var(--white); }
+  .verdict.c { background: var(--teal); } .verdict.p { background: var(--orange); } .verdict.n { background: var(--navy); }
+  .btn {
+    font: inherit; font-weight: 800; cursor: pointer; min-height: 48px; padding: .5rem 1.3rem;
+    border-radius: 12px; border: 2px solid var(--navy); background: var(--navy); color: var(--white);
+  }
+  .btn.alt { background: var(--white); color: var(--navy); }
+  .btn.mini { min-height: 40px; padding: .25rem .8rem; font-size: .9rem; }
+  .progress { height: 12px; background: #d5e3e4; border-radius: 999px; overflow: hidden; margin: .4rem 0 1rem; }
+  .progress > div { height: 100%; background: var(--teal); width: 0; transition: width .3s; }
+  @media (prefers-reduced-motion: reduce) { .progress > div { transition: none; } }
+  .qmeta { display: flex; justify-content: space-between; font-weight: 700; color: var(--navy); }
+  .sentence { font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: .6rem 0 1rem; line-height: 1.35; }
+  .blank { display: inline-block; min-width: 3.5rem; border-bottom: 4px solid var(--navy); text-align: center; }
+  .blank.filled { border-bottom-color: var(--green); color: var(--green); }
+  .err { background: var(--orange-tint); color: var(--orange); padding: 0 .3rem; border-radius: 6px; text-decoration: underline wavy var(--orange); text-underline-offset: 4px; }
+  .fixed { background: var(--green-tint); color: var(--green); padding: 0 .3rem; border-radius: 6px; }
+  .opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem; }
+  .opt {
+    font: inherit; font-weight: 800; font-size: 1.05rem; cursor: pointer; min-height: 56px; padding: .6rem 1rem;
+    border-radius: 14px; border: 3px solid var(--navy); background: var(--white); color: var(--navy); text-align: center;
+  }
+  .opt.c { border-color: var(--teal); } .opt.p { border-color: var(--orange); } .opt.n { border-color: var(--navy); }
+  .opt:hover:not(:disabled) { background: var(--soft); }
+  .opt:disabled { cursor: default; }
+  .opt.right { background: var(--green-tint); border-color: var(--green); color: var(--green); }
+  .opt.wrong { background: var(--red-tint); border-color: var(--red); color: var(--red); }
+  .feedback { margin-top: 1rem; padding: .9rem 1rem; border-radius: 12px; background: var(--soft); border: 2px solid #d5e3e4; }
+  .feedback.good { background: var(--green-tint); border-color: var(--green); }
+  .feedback.bad { background: var(--red-tint); border-color: var(--red); }
+  .feedback strong.head { display: block; font-size: 1.15rem; margin-bottom: .2rem; }
+  .score { font-size: 3rem; font-weight: 800; color: var(--navy); font-family: Cambria, Georgia, serif; }
+  .missed { margin: .5rem 0 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+  .missed li { background: var(--soft); border-radius: 12px; padding: .7rem .9rem; }
+  .hint { color: #3e5358; font-size: .95rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  footer { text-align: center; color: #3e5358; padding: 1rem; font-size: .9rem; }
+  .who { background: var(--white); border-bottom: 1px solid #d5e3e4; }
+  .who .wrap { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: end; padding: .7rem 1rem; }
+  .who label { display: grid; gap: .15rem; font-weight: 700; color: var(--navy); font-size: .9rem; }
+  .who input { font: inherit; min-height: 44px; padding: .3rem .7rem; border: 2px solid var(--navy); border-radius: 10px; background: var(--white); color: var(--ink); }
+  .who input:focus-visible { outline: 4px solid var(--gold); outline-offset: 2px; }
+  .who input#sName { width: 15rem; max-width: 100%; }
+  .who input#sPeriod { width: 6rem; }
+  .who .note { flex: 1 1 14rem; color: #3e5358; font-size: .9rem; margin: 0; align-self: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Squish or Own?</h1>
+  <p>Contractions vs. Possessives &middot; Grade 7 Grammar Practice</p>
+</header>
+
+<div class="who">
+  <div class="wrap">
+    <label for="sName">Your name<input id="sName" type="text" autocomplete="off" maxlength="60" placeholder="First name and last initial"></label>
+    <label for="sPeriod">Period<input id="sPeriod" type="text" autocomplete="off" maxlength="10" inputmode="numeric" placeholder="e.g. 3"></label>
+    <button class="btn alt mini" type="button" id="sReset">New student</button>
+    <p class="note" id="whoNote" aria-live="polite"></p>
+  </div>
+</div>
+
+<nav aria-label="Lesson sections">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" id="tab-learn" aria-controls="learn" aria-selected="true">1. Learn</button>
+    <button class="tab" role="tab" id="tab-sort" aria-controls="sort" aria-selected="false">2. Squish or Own?</button>
+    <button class="tab" role="tab" id="tab-pick" aria-controls="pick" aria-selected="false">3. Pick the Word</button>
+    <button class="tab" role="tab" id="tab-fix" aria-controls="fix" aria-selected="false">4. Fix It</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- LEARN -->
+  <section class="panel" id="learn" role="tabpanel" aria-labelledby="tab-learn">
+    <div class="grid2">
+      <div class="card teal">
+        <span class="tag t">Squish</span>
+        <h2>Contraction</h2>
+        <p>Two words join into one. The apostrophe (&rsquo;) replaces the missing letters.</p>
+        <p class="big">do not &rarr; don&rsquo;t</p>
+        <p class="big">they are &rarr; they&rsquo;re</p>
+        <p class="hint">The &ldquo;o&rdquo; in <em>not</em> is missing. The &ldquo;a&rdquo; in <em>are</em> is missing.</p>
+      </div>
+      <div class="card orange">
+        <span class="tag o">Own</span>
+        <h2>Possessive</h2>
+        <p>An apostrophe + s shows who owns something.</p>
+        <p class="big">Maria&rsquo;s backpack</p>
+        <p class="big">the girls&rsquo; coats</p>
+        <p class="hint">One owner: &rsquo;s. Many owners that already end in -s: s&rsquo;.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>The Expand Test Lab</h2>
+      <p>Pick a sentence. Then watch the test: <strong>Spot it, Say it as two words, check if it makes Sense.</strong></p>
+      <div class="chips" id="labChips" role="group" aria-label="Choose a sentence to test"></div>
+      <div id="labOut" aria-live="polite" class="steps"></div>
+    </div>
+
+    <div class="card">
+      <h2>Tricky Twins</h2>
+      <table>
+        <thead><tr><th scope="col">Squish (contraction)</th><th scope="col">Own (possessive)</th></tr></thead>
+        <tbody>
+          <tr><td><b>it&rsquo;s</b> = it is</td><td><b>its</b> = belongs to it</td></tr>
+          <tr><td><b>they&rsquo;re</b> = they are</td><td><b>their</b> = belongs to them <span class="hint">(there = a place)</span></td></tr>
+          <tr><td><b>you&rsquo;re</b> = you are</td><td><b>your</b> = belongs to you</td></tr>
+          <tr><td><b>who&rsquo;s</b> = who is</td><td><b>whose</b> = belongs to who</td></tr>
+        </tbody>
+      </table>
+      <p class="hint" style="margin-top:.7rem">Possessive pronouns never use an apostrophe: his, hers, its, ours, yours, theirs.</p>
+    </div>
+
+    <div class="card">
+      <h2>Watch Out: Plurals</h2>
+      <p>A plural just means <em>more than one</em>. It does <strong>not</strong> get an apostrophe.</p>
+      <p><b>The dogs ran.</b> (plural) &nbsp;&middot;&nbsp; <b>The dog&rsquo;s bone.</b> (possessive) &nbsp;&middot;&nbsp; <b>The dog&rsquo;s tired.</b> (contraction: dog is)</p>
+    </div>
+
+    <button class="btn" id="startPractice">Start practice &rarr;</button>
+  </section>
+
+  <!-- QUIZ PANELS -->
+  <section class="panel" id="sort" role="tabpanel" aria-labelledby="tab-sort" hidden></section>
+  <section class="panel" id="pick" role="tabpanel" aria-labelledby="tab-pick" hidden></section>
+  <section class="panel" id="fix" role="tabpanel" aria-labelledby="tab-fix" hidden></section>
+</main>
+
+<footer>Tip: say each sentence out loud. If you can say it as two words, it&rsquo;s a contraction.</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- helpers ---------- */
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function speak(text) {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US"; u.rate = 0.9;
+    window.speechSynthesis.speak(u);
+  }
+  var canSpeak = "speechSynthesis" in window;
+
+  /* ---------- Classroom Logger (Google Sheet via Apps Script) ----------
+     Rows go to the sheet "Classroom logger bms 2026", tab "Log".
+     To turn logging off, set enabled to false. */
+  var LOGGER = {
+    url: "https://script.google.com/macros/s/AKfycbwV7Hd_JRL54Xbxm2tiAFx3kWm_WFO5nxSotzCD0PiAuEYtx4Z3AlTQ3UwwJYrsOKS6/exec",
+    app: "squish-or-own",
+    enabled: true
+  };
+  var student = { name: "", period: "" };
+  var SKEY = "squish-or-own-student-v1";
+  try {
+    var savedStudent = JSON.parse(localStorage.getItem(SKEY) || "null");
+    if (savedStudent) { student.name = savedStudent.name || ""; student.period = savedStudent.period || ""; }
+  } catch (e) {}
+  function saveStudent() { try { localStorage.setItem(SKEY, JSON.stringify(student)); } catch (e) {} }
+  var hasLoggedStart = false;
+  function sendLog(payload) {
+    if (!LOGGER.enabled || !LOGGER.url) return;
+    try {
+      var p = fetch(LOGGER.url, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) });
+      if (p && p.catch) p.catch(function () {});
+    } catch (e) { /* never block a student's work because logging failed */ }
+  }
+  function logEvent(extra) {
+    try {
+      var base = { app: LOGGER.app, student: ((student.name || "").trim() || "unknown"), period: ((student.period || "").trim()) };
+      if (!hasLoggedStart && extra.event !== "start") { hasLoggedStart = true; sendLog(Object.assign({}, base, { event: "start" })); }
+      if (extra.event === "start") hasLoggedStart = true;
+      sendLog(Object.assign({}, base, extra));
+    } catch (e) {}
+  }
+  var quizzes = {};
+
+  /* ---------- tabs ---------- */
+  var tabs = ["learn", "sort", "pick", "fix"];
+  function showTab(id) {
+    tabs.forEach(function (t) {
+      var on = t === id;
+      document.getElementById(t).hidden = !on;
+      document.getElementById("tab-" + t).setAttribute("aria-selected", on ? "true" : "false");
+    });
+    window.scrollTo({ top: 0 });
+  }
+  tabs.forEach(function (t) {
+    document.getElementById("tab-" + t).addEventListener("click", function () { showTab(t); });
+  });
+  document.getElementById("startPractice").addEventListener("click", function () { showTab("sort"); });
+
+  /* ---------- Expand Test Lab ---------- */
+  var lab = [
+    { s: "Maria’s happy.", w: "Maria’s", two: "Maria is happy.", ok: true, type: "c" },
+    { s: "Maria’s backpack.", w: "Maria’s", two: "Maria is backpack.", ok: false, type: "p" },
+    { s: "They’re late.", w: "They’re", two: "They are late.", ok: true, type: "c" },
+    { s: "Their coats are wet.", w: "Their", two: "They are coats are wet.", ok: false, type: "p" },
+    { s: "It’s sunny.", w: "It’s", two: "It is sunny.", ok: true, type: "c" },
+    { s: "The dog wagged its tail.", w: "its", two: "The dog wagged it is tail.", ok: false, type: "p" }
+  ];
+  var chipBox = document.getElementById("labChips");
+  var labOut = document.getElementById("labOut");
+  lab.forEach(function (item, i) {
+    var b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = item.s;
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function () {
+      Array.prototype.forEach.call(chipBox.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      logEvent({ event: "lab", section: "learn-lab", item: item.s });
+      var verdict = item.type === "c"
+        ? '<span class="verdict c">Contraction (squish)</span>'
+        : '<span class="verdict p">Possessive (own)</span>';
+      var note = item.type === "p" && /^(Their|its)$/.test(item.w)
+        ? ' <span class="hint">Possessive pronouns have no apostrophe.</span>' : "";
+      labOut.innerHTML =
+        '<div class="step"><b class="n">1</b><span><strong>Spot it:</strong> &ldquo;' + esc(item.w) + '&rdquo;</span></div>' +
+        '<div class="step"><b class="n">2</b><span><strong>Say it as two words:</strong> &ldquo;' + esc(item.two) + '&rdquo;</span></div>' +
+        '<div class="step"><b class="n">3</b><span><strong>Does it make sense?</strong> ' + (item.ok ? "Yes." : "No.") + ' &rarr; ' + verdict + note + '</span></div>' +
+        (canSpeak ? '<div><button class="btn alt mini" type="button" id="labSpeak">🔊 Listen</button></div>' : "");
+      var sp = document.getElementById("labSpeak");
+      if (sp) sp.addEventListener("click", function () { speak(item.s); });
+    });
+    chipBox.appendChild(b);
+  });
+
+  /* ---------- quiz engine ---------- */
+  var results = {};
+  function makeQuiz(id, cfg) {
+    var root = document.getElementById(id);
+    var items, idx, score, missed;
+
+    function start() {
+      items = shuffle(cfg.items.slice());
+      idx = 0; score = 0; missed = [];
+      render();
+    }
+
+    function render() {
+      if (idx >= items.length) { done(); return; }
+      var it = items[idx];
+      var opts = cfg.shuffleOptions ? shuffle(it.options.slice()) : it.options.slice();
+      var pct = Math.round((idx / items.length) * 100);
+      var html =
+        '<div class="card">' +
+        '<div class="qmeta"><span>' + esc(cfg.title) + '</span><span>Question ' + (idx + 1) + ' of ' + items.length + '</span></div>' +
+        '<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><div style="width:' + pct + '%"></div></div>' +
+        '<p class="hint">' + esc(cfg.directions) + '</p>' +
+        '<div class="sentence" id="' + id + '-q">' + cfg.question(it) + '</div>' +
+        (canSpeak ? '<button class="btn alt mini" type="button" id="' + id + '-speak">🔊 Listen</button>' : '') +
+        '<div class="opts" role="group" aria-label="Answer choices" style="margin-top:.9rem">' +
+        opts.map(function (o) {
+          var label = typeof o === "string" ? o : o.label;
+          var val = typeof o === "string" ? o : o.value;
+          var cls = typeof o === "string" ? "" : (" " + o.cls);
+          return '<button class="opt' + cls + '" type="button" data-v="' + esc(val) + '">' + esc(label) + '</button>';
+        }).join("") +
+        '</div>' +
+        '<div id="' + id + '-fb" aria-live="polite"></div>' +
+        '</div>';
+      root.innerHTML = html;
+
+      var sp = document.getElementById(id + "-speak");
+      if (sp) sp.addEventListener("click", function () { speak(cfg.speakText(it)); });
+
+      Array.prototype.forEach.call(root.querySelectorAll(".opt"), function (btn) {
+        btn.addEventListener("click", function () { answer(it, btn); });
+      });
+    }
+
+    function answer(it, btn) {
+      var chosen = btn.getAttribute("data-v");
+      var correct = chosen === it.answer;
+      Array.prototype.forEach.call(root.querySelectorAll(".opt"), function (b) {
+        b.disabled = true;
+        if (b.getAttribute("data-v") === it.answer) b.classList.add("right");
+      });
+      if (correct) { score++; } else { btn.classList.add("wrong"); missed.push(it); }
+      logEvent({ event: "answer", section: id, item: it.q, correct: correct, text: correct ? "" : ("chose: " + chosen + " | answer: " + it.answer) });
+      document.getElementById(id + "-q").innerHTML = cfg.revealed(it);
+      var last = idx === items.length - 1;
+      var fb = document.getElementById(id + "-fb");
+      fb.innerHTML =
+        '<div class="feedback ' + (correct ? "good" : "bad") + '">' +
+        '<strong class="head">' + (correct ? "✓ Correct!" : "✗ Not quite.") + '</strong>' +
+        '<span>' + esc(it.why) + '</span></div>' +
+        '<p style="margin:1rem 0 0"><button class="btn" type="button" id="' + id + '-next">' + (last ? "See my score" : "Next question →") + '</button></p>';
+      var nxt = document.getElementById(id + "-next");
+      nxt.addEventListener("click", function () { idx++; render(); });
+      nxt.focus();
+    }
+
+    function done() {
+      var total = items.length;
+      results[id] = { score: score, total: total };
+      logEvent({ event: "quiz-complete", section: id, text: "score " + score + "/" + total });
+      var tab = document.getElementById("tab-" + id);
+      tab.textContent = cfg.tabLabel + " (" + score + "/" + total + ")";
+      var ratio = score / total;
+      var msg = ratio >= 0.85 ? "Excellent! You have mastered this skill."
+        : ratio >= 0.7 ? "Almost there! Review the Expand Test and try again."
+        : "Keep practicing. Go back to Learn and try the Expand Test Lab.";
+      var html =
+        '<div class="card">' +
+        '<h2>' + esc(cfg.title) + ' &mdash; Your Score</h2>' +
+        '<div class="score" aria-live="polite">' + score + ' / ' + total + '</div>' +
+        '<p><strong>' + msg + '</strong></p>';
+      if (missed.length) {
+        html += '<h3>Review these</h3><ul class="missed">' +
+          missed.map(function (m) {
+            return '<li><div><strong>' + cfg.revealed(m) + '</strong></div><div class="hint">' + esc(m.why) + '</div></li>';
+          }).join("") + '</ul>';
+      } else {
+        html += '<p>No mistakes. Great work!</p>';
+      }
+      html += '<p style="margin-top:1rem"><button class="btn" type="button" id="' + id + '-again">Try again</button> ' +
+        (cfg.next ? '<button class="btn alt" type="button" id="' + id + '-go">Next activity →</button>' : '') + '</p></div>';
+      root.innerHTML = html;
+      document.getElementById(id + "-again").addEventListener("click", function () {
+        logEvent({ event: "retry", section: id });
+        start();
+      });
+      var go = document.getElementById(id + "-go");
+      if (go) go.addEventListener("click", function () { showTab(cfg.next); });
+    }
+
+    start();
+    return {
+      restart: function () {
+        document.getElementById("tab-" + id).textContent = cfg.tabLabel;
+        start();
+      }
+    };
+  }
+
+  /* ---------- Quiz 1: Squish or Own? ---------- */
+  var sortOpts = [
+    { label: "Squish (contraction)", value: "C", cls: "c" },
+    { label: "Own (possessive)", value: "P", cls: "p" },
+    { label: "Neither (plural)", value: "N", cls: "n" }
+  ];
+  quizzes.sort = makeQuiz("sort", {
+    title: "Squish or Own?",
+    tabLabel: "2. Squish or Own?",
+    directions: "Is the apostrophe squishing words together, showing ownership, or is the word just a plural?",
+    next: "pick",
+    question: function (it) { return esc(it.q); },
+    revealed: function (it) { return esc(it.q); },
+    speakText: function (it) { return it.q; },
+    items: [
+      { q: "Lena’s reading a graphic novel.", answer: "C", options: sortOpts, why: "Lena is reading makes sense, so ’s replaces the letters in “is.” It is a contraction." },
+      { q: "Lena’s graphic novel is on the shelf.", answer: "P", options: sortOpts, why: "“Lena is graphic novel” is nonsense. The novel belongs to Lena, so it is a possessive." },
+      { q: "We’ll practice after lunch.", answer: "C", options: sortOpts, why: "We’ll = we will. Two words squished into one." },
+      { q: "The coach’s whistle is loud.", answer: "P", options: sortOpts, why: "The whistle belongs to the coach. “The coach is whistle” makes no sense." },
+      { q: "Don’t forget your homework.", answer: "C", options: sortOpts, why: "Don’t = do not. The apostrophe replaces the “o.”" },
+      { q: "The boys’ locker room is down the hall.", answer: "P", options: sortOpts, why: "The locker room belongs to the boys. Boys is plural and ends in s, so we add only the apostrophe." },
+      { q: "She’s finished her essay.", answer: "C", options: sortOpts, why: "She’s = she has. The ’s can stand for “has” as well as “is.”" },
+      { q: "The dogs barked all night.", answer: "N", options: sortOpts, why: "Dogs just means more than one dog. Nothing is owned and no letters are missing, so no apostrophe." },
+      { q: "It’s raining outside.", answer: "C", options: sortOpts, why: "It’s = it is. “It is raining” makes sense." },
+      { q: "The cat licked its paws.", answer: "P", options: sortOpts, why: "The paws belong to the cat. Possessive “its” never takes an apostrophe." }
+    ]
+  });
+
+  /* ---------- Quiz 2: Pick the Word ---------- */
+  function blankSentence(it, filled) {
+    var parts = it.q.split("___");
+    var mid = filled
+      ? '<span class="blank filled">' + esc(it.answer) + '</span>'
+      : '<span class="blank" aria-label="blank">&nbsp;&nbsp;&nbsp;</span>';
+    return esc(parts[0]) + mid + esc(parts[1]);
+  }
+  quizzes.pick = makeQuiz("pick", {
+    title: "Pick the Word",
+    tabLabel: "3. Pick the Word",
+    directions: "Choose the word that fits the blank. Use the Expand Test!",
+    next: "fix",
+    shuffleOptions: false,
+    question: function (it) { return blankSentence(it, false); },
+    revealed: function (it) { return blankSentence(it, true); },
+    speakText: function (it) { return it.q.replace("___", "blank"); },
+    items: [
+      { q: "___ a beautiful day for a walk.", options: ["It’s", "Its"], answer: "It’s", why: "It’s = it is. “It is a beautiful day” makes sense." },
+      { q: "The robot lost ___ battery.", options: ["it’s", "its"], answer: "its", why: "The battery belongs to the robot. “It is battery” is nonsense, so use its (no apostrophe)." },
+      { q: "___ project won first place.", options: ["They’re", "Their", "There"], answer: "Their", why: "The project belongs to them. Their shows ownership." },
+      { q: "I think ___ waiting by the gym.", options: ["they’re", "their", "there"], answer: "they’re", why: "They are waiting makes sense, so use they’re." },
+      { q: "___ locker is open.", options: ["You’re", "Your"], answer: "Your", why: "The locker belongs to you. “You are locker” is nonsense, so use your." },
+      { q: "___ going to do great.", options: ["You’re", "Your"], answer: "You’re", why: "You are going to do great makes sense, so use you’re." },
+      { q: "___ turn is it to read?", options: ["Who’s", "Whose"], answer: "Whose", why: "“Who is turn” is nonsense. Whose shows ownership." },
+      { q: "___ going to the library?", options: ["Who’s", "Whose"], answer: "Who’s", why: "Who is going to the library makes sense, so use who’s." },
+      { q: "The puppy wagged ___ tail.", options: ["it’s", "its"], answer: "its", why: "The tail belongs to the puppy. Use its, with no apostrophe." },
+      { q: "Put the books over ___.", options: ["their", "they’re", "there"], answer: "there", why: "There tells where: a place. Over there." }
+    ]
+  });
+
+  /* ---------- Quiz 3: Fix It ---------- */
+  function fixSentence(it, fixed) {
+    var parts = it.q.split(it.err);
+    var mid = fixed
+      ? '<span class="fixed">' + esc(it.answer) + '</span>'
+      : '<span class="err">' + esc(it.err) + '</span>';
+    return esc(parts[0]) + mid + esc(parts.slice(1).join(it.err));
+  }
+  quizzes.fix = makeQuiz("fix", {
+    title: "Fix It",
+    tabLabel: "4. Fix It",
+    directions: "The underlined word is wrong. Choose the correct word or spelling.",
+    shuffleOptions: true,
+    question: function (it) { return fixSentence(it, false); },
+    revealed: function (it) { return fixSentence(it, true); },
+    speakText: function (it) { return it.q; },
+    items: [
+      { q: "The bird fed it’s babies.", err: "it’s", options: ["its", "its’", "it is"], answer: "its", why: "The babies belong to the bird. Possessive its has no apostrophe." },
+      { q: "Your my best friend.", err: "Your", options: ["You’re", "Youre", "Yours"], answer: "You’re", why: "You are my best friend. Use the contraction you’re." },
+      { q: "Who’s backpack is on the floor?", err: "Who’s", options: ["Whose", "Whos", "Who is"], answer: "Whose", why: "“Who is backpack” is nonsense. Use whose to ask about ownership." },
+      { q: "Their is a puzzle on the table.", err: "Their", options: ["There", "They’re", "Theirs"], answer: "There", why: "“There is” tells that something exists in a place. Their would show ownership." },
+      { q: "We cant wait for the field trip.", err: "cant", options: ["can’t", "ca’nt", "cant’"], answer: "can’t", why: "Can’t = cannot. The apostrophe goes where the letters are missing: can’t." },
+      { q: "The dog’s ran across the yard.", err: "dog’s", options: ["dogs", "dogs’", "dog is"], answer: "dogs", why: "More than one dog is just a plural. “The dog is ran” is nonsense, and nothing is owned." }
+    ]
+  });
+  /* ---------- student name and period ---------- */
+  var nameBox = document.getElementById("sName");
+  var periodBox = document.getElementById("sPeriod");
+  var whoNote = document.getElementById("whoNote");
+  function updateWho() {
+    whoNote.textContent = (student.name || "").trim()
+      ? "Your teacher can see your practice."
+      : "Type your name first so your teacher can see your work.";
+  }
+  nameBox.value = student.name; periodBox.value = student.period; updateWho();
+  nameBox.addEventListener("input", function () { student.name = this.value; saveStudent(); updateWho(); });
+  periodBox.addEventListener("input", function () { student.period = this.value; saveStudent(); });
+  document.getElementById("sReset").addEventListener("click", function () {
+    student.name = ""; student.period = ""; saveStudent();
+    nameBox.value = ""; periodBox.value = ""; hasLoggedStart = false; updateWho();
+    Object.keys(quizzes).forEach(function (k) { quizzes[k].restart(); });
+    labOut.innerHTML = "";
+    Array.prototype.forEach.call(chipBox.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+    showTab("learn");
+    nameBox.focus();
+  });
+})();
+</script>
+</body>
+</html>
